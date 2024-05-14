@@ -12,9 +12,84 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
 		<script type="module" src="/js/router.js" defer></script>
 	</head>
-	<body id="body">
-		<header id="header" class="sticky-top "></header>
-		<main id="content" class="container-fluid "></main>
-		<footer id="footer" class="container-fluid "></footer>
+	<body id="body" class="container-fluid d-flex flex-column ">
+		<header id="header"></header>
+		<aside class="d-flex justify-content-around position-fixed">
+			<nav class="navbar navbar-expand-sm navbar-light">
+				<div class="d-flex flex-column navbar-collapse navbar-nav">
+					<li class="nav-item ">
+						<a href="#/" data-i18n="home" class="nav-link active "> </a>
+					</li>
+					<li class="nav-item">
+						<a href="#/about" data-i18n="about" class="nav-link active"> </a>
+					</li>
+					<li class="nav-item">
+						<a href="#/login" data-i18n="login" class="nav-link active"> </a>
+					</li>
+					<li class="nav-item">
+						<a href="#/signup" data-i18n="sign_up" class="nav-link disabled"> </a>
+					</li>
+					<li class="nav-item">
+						<button type="button" data-toggle="modal" data-target="#setting">Setting</button>
+						<div class="modal" id="setting" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content ">
+									<div class="modal-header ">
+										<h5 class="modal-title">Setting</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+									</div>
+									<div class="modal-footer ">
+										<button id='languageDisplay' class='dropdown-toggle' role='button' data-toggle='dropdown'>
+											<span class="caret" data-i18n="language"> </span>
+										</button>
+										<div id='languageSelector' class='dropdown-menu'> 
+											<button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english"> </button>
+											<button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french"> </button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+			</nav>
+		</aside>
+		<main>
+			<div id="content"></div>
+		</main>
+		<footer id="footer" class="sticky-bottom"></footer>
 	</body>
 </html>
+
+		<!-- <aside class="col-sm-2 col-md-2 col-lg-1 col-xl-1">
+			<button type="button" data-toggle="modal" data-target="#setting">Setting</button>
+			<div class="modal" id="setting" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content ">
+						<div class="modal-header ">
+							<h5 class="modal-title">Setting</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+						</div>
+						<div class="modal-footer ">
+							<div>
+								<button id='languageDisplay' class='dropdown-toggle' role='button' data-toggle='dropdown'>
+									<span class="caret" data-i18n="language"> </span>
+								</button>
+								<div id='languageSelector' class='dropdown-menu'> 
+									<button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english"> </button>
+									<button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french"> </button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside> -->

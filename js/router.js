@@ -40,10 +40,10 @@ function handleRoutes() {
 window.addEventListener('DOMContentLoaded', () => {
 	renderHeader();
 	renderFooter();
+    handleRoutes();
     loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-		handleRoutes();
-	});
+	}); 
 });
 
 window.addEventListener('hashchange', handleRoutes);

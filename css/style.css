@@ -1,0 +1,17 @@
+#content {
+	margin-left: 125px;
+}
+
+aside nav {
+	width: 120px;
+	text-align: center;
+}
+
+html, body, aside {
+	height: 100%;
+}
+
+.modal-backdrop {
+	position: relative !important;
+	height: auto !important;
+}
