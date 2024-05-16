@@ -5,7 +5,30 @@
 		</svg>
 	</a>
 	<p class="p-2">
-		&copy;2024 <span translate="no"> Brand Name.</span> <span data-i18n="rights_reserved"></span> <br><a href="#" data-i18n="privacy"> </a> | <a href="#" data-i18n="terms"> </a> | <a href="#" data-i18n="legal"> </a> | <a href="#" data-i18n="cookie_preferences"> </a>
+		&copy;2024 <span translate="no"> Brand Name.</span> <span data-i18n="rights_reserved">All rights reserved</span> <br><a href="#" data-i18n="privacy">Privacy</a> | <a href="#" data-i18n="terms">Terms</a> | <a href="#" data-i18n="legal">Legal</a> | <a href="#" data-i18n="cookie_preferences">Cookie Preferences</a>
 	</p>
 </div>
-
+<button type="button" data-toggle="modal" data-target="#setting" data-i18n="setting">Setting</button>
+<div class="modal fade" id="setting" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content mb-0 ">
+			<div class="modal-header">
+					<h5 class="modal-title" data-i18n="setting">Setting</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			</div> 
+			<div class="modal-body">
+			</div>
+			<div class="modal-footer mb-0 ">
+				<button id='languageDisplay' class='dropdown-toggle' role='button' data-toggle='dropdown'>
+					<span class="caret" data-i18n="language">Language</span>
+				</button>
+				<div id='languageSelector' class='dropdown-menu'> 
+					<button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english">English</button>
+					<button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french">French</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

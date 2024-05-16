@@ -1,0 +1,40 @@
+<ul class="d-flex flex-column nav mb-auto ">
+	<li class="nav-item ">
+		<a href="#/" data-i18n="home" class="nav-link active "> </a>
+	</li>
+	<li class="nav-item">
+		<a href="#/about" data-i18n="about" class="nav-link active"></a>
+	</li>
+	<li class="nav-item">
+		<a href="#/login" data-i18n="login" class="nav-link active">Login</a>
+	</li>
+	<li class="nav-item">
+		<a href="#/signup" data-i18n="sign_up" class="nav-link disabled"> </a>
+	</li>
+</ul>
+<div class="mt-auto ">
+<button type="button" data-toggle="modal" data-target="#setting" data-i18n="setting">Setting</button>
+	<div class="modal fade" id="setting" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content mb-0 ">
+				<div class="modal-header">
+						<h5 class="modal-title" data-i18n="setting">Setting</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				</div> 
+				<div class="modal-body">
+				</div>
+				<div class="modal-footer mb-0 ">
+					<button id='languageDisplay' class='dropdown-toggle' role='button' data-toggle='dropdown'>
+						<span class="caret" data-i18n="language">Language</span>
+					</button>
+					<div id='languageSelector' class='dropdown-menu'> 
+						<button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english">English</button>
+						<button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french">French</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

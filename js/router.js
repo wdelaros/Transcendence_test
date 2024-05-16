@@ -4,6 +4,7 @@ import { renderAbout } from "./pages/about/about.js";
 import { renderLogin } from "./pages/login/login.js";
 import { renderHeader } from "./components/header/header.js";
 import { renderFooter } from "./components/footer/footer.js";
+import { renderSidebar } from "./components/sidebar/sidebar.js";
 
 function debounce(func, delay) {
     let timeoutId;
@@ -23,25 +24,25 @@ function renderNotFound() {
 	loadContent('content', '/js/pages/error/pageNotFound.html');
 }
 const routeHandlers = {
-    '': renderTemplate,
-    '#/': renderHome,
-    '#/about': renderAbout,
-    '#/login': renderLogin,
-    'default': renderNotFound
+	'': renderTemplate,
+	'#/': renderHome,
+	'#/about': renderAbout,
+	'#/login': renderLogin,
+	'default': renderNotFound
 };
 
 function handleRoutes() {
-    const hash = window.location.hash || '';
-    const handler = routeHandlers[hash] || routeHandlers['default'];
+	const hash = window.location.hash || '';
+	const handler = routeHandlers[hash] || routeHandlers['default'];
 	document.getElementById('content').innerHTML = '';
-    handler();
+	handler();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
 	renderHeader();
 	renderFooter();
-    handleRoutes();
-    loadContentLang('body', document.documentElement.lang, () => {
+	handleRoutes();
+	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
 	}); 
 });
@@ -49,20 +50,20 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('hashchange', handleRoutes);
 
 function changeLanguage(lang) {
-    debouncedChangeLanguage(lang);
+	debouncedChangeLanguage(lang);
 }
 
 const debouncedChangeLanguage = debounce((lang) => {
-    loadContentLang('body', lang, () => {
+	loadContentLang('body', lang, () => {
 		attachEventListeners();
 	});
 }, 300);
 
 function attachEventListeners() {
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            changeLanguage(button.dataset.lang);
-        });
-    });
+	const langButtons = document.querySelectorAll('.lang-btn');
+	langButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			changeLanguage(button.dataset.lang);
+		});
+	});
 }

@@ -1,27 +1,3 @@
-#content {
-	margin-left: 125px;
-}
-
-aside {
-	width: 120px;
-	text-align: center;
-	div {
-		margin-bottom: 6rem !important;
-	}
-}
-
-
-
 html, body, aside {
 	height: 100%;
-}
-
-/* main div ul {
-	max-width: 120px;
-	text-align: center;
-} */
-
-.modal-backdrop {
-	position: relative !important;
-	height: auto !important;
 }
