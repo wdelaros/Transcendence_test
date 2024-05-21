@@ -44,7 +44,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	handleRoutes();
 	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-		changeLanguage(document.documentElement.lang);
+		if (navigator.language == 'fr' || navigator.language == 'en')
+			changeLanguage(navigator.language);
+		else
+			changeLanguage('en');
 	});
 });
 

@@ -2,10 +2,23 @@ html, body {
 	height: 100%;
 }
 
+.infiniteModal {
+	.modal-dialog {
+		max-width: none !important;
+	}
+}
+
 .modal-backdrop {
 	display: none !important;
 }
 
+.modal-dialog-scrollable {
+	max-height: 65%;
+}
+
 .friendBtn {
-	width: 25% !important;
+	width: 30% !important;
+	.modal-body {
+		height: 1000px;
+	}
 }
