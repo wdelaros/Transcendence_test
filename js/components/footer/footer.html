@@ -1,68 +1,95 @@
-<div>
-	<button type="button" data-bs-toggle="modal" data-bs-target="#setting" class="btn position-absolute bottom-0 start-0">
-		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-			<path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z"/>
-		</svg>
-		<br>
-		<span data-i18n="setting">Setting</span>
-	</button>
-	<!-- menu close modal open a new -->
-	<div class="modal" id="setting" tabindex="-1" aria-labelledby="setting" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" data-i18n="setting">Setting</h5>
-					<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-				</div> 
-				<div class="modal-body">
-					<div class="d-flex  justify-content-between ">
-						<button type="button" class="btn">menu</button>
-						<button type="button" class="btn">sound</button>
-						<button type="button" class="btn">Contact</button>
-					</div>
-					<hr>
+<button type="button" data-bs-toggle="modal" data-bs-target="#setting" class="position-absolute bottom-0 start-0">
+	<img src="/img/gear-wide-connected.svg" alt="gear wide connected" style="width: 32px; height: 32px;">
+	<br>
+	<span data-i18n="setting">Setting</span>
+</button>
+<!-- menu close modal open a new -->
+
+<button type="button" data-bs-toggle="modal" data-bs-target="#friend" class="friendBtn text-center position-absolute bottom-0 end-0">
+	<img src="/img/people.svg" alt="person fill" style="width: 32px; height: 32px;">
+	<br>
+	<span data-i18n="friend_list"></span>
+</button>
+
+<!-- setting modal -->
+<div class="modal" id="setting" tabindex="-1" data-bs-backdrop="none" aria-labelledby="setting" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" data-i18n="setting">Setting</h5>
+				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+			</div> 
+			<div class="modal-body">
+				<div class="d-flex  justify-content-between ">
+					<button type="button" class="btn">meu</button>
+					<button type="button" class="btn">sound</button>
+					<button type="button" class="btn">Contact</button>
 				</div>
-				<div class="modal-footer">
-					<div class="btn-group ">
-						<button type="button" id="languageDisplay" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-i18n="language">
-							Language
-						</button>
-						<ul id='languageSelector' class='dropdown-menu'> 
-							<li><button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english">English</button></li>
-							<li><button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french">French</button></li>
-						</ul>
-					</div>
+				<hr>
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group ">
+					<button type="button" id="languageDisplay" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language">
+						Language
+					</button>
+					<ul id='languageSelector' class='dropdown-menu'> 
+						<li><button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english">English</button></li>
+						<li><button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french">French</button></li>
+					</ul>
 				</div>
 			</div>
-		</div> 
-	</div>
+		</div>
+	</div> 
 </div>
-<div>
-	<button type="button" data-bs-toggle="modal" data-bs-target="#friend" class="btn position-absolute bottom-0 end-0">
-		
-		<br>
-		<span>friend</span>
-	</button>
-	<!-- menu close modal open a new -->
-	<div class="modal mb-0 " id="friend" tabindex="-1" aria-labelledby="friend" aria-hidden="true">
-		<div class="modal-dialog position-absolute bottom-0 end-0 mb-0  ">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">friend list</h5>
-					
-				</div> 
-				<div class="modal-body">
-					<div class="d-flex  justify-content-between ">
-						<button type="button" class="btn">menu</button>
-						<button type="button" class="btn">sound</button>
-						<button type="button" class="btn">Contact</button>
-					</div>
-					<hr>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
+
+<!-- friend list modal -->
+<div class="modal " id="friend" data-bs-backdrop="static" tabindex="-1" aria-labelledby="friend" aria-hidden="true">
+	<div class="friendBtn modal-dialog modal-fullscreen-sm-down position-absolute bottom-0 end-0 mb-0 me-0">
+		<div class="modal-content rounded-0 border">
+			<div class="modal-header d-flex justify-content-between">
+				<h5 class="modal-title" data-i18n="friend_list"></h5>
+				<button type="button" data-bs-toggle="modal" data-bs-target="#addFriend" class="btn">
+					<img src="/img/person-add.svg" alt="people add">
+				</button>
+			</div> 
+			<div class="modal-body">
+				<p>allo</p>
+				<p>allo</p>
+				<p>allo</p>
+				<p>allo</p>
+				<p>allo</p>
+				<p>allo</p>
+				<p>allo</p>
 			</div>
-		</div> 
-	</div>
+			<div class="modal-footer">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+		</div>
+	</div> 
+</div>
+
+<!-- add friend modal -->
+<div class="modal " id="addFriend" data-bs-backdrop="static" tabindex="-1" aria-labelledby="addFriend" aria-hidden="true">
+	<div class="friendBtn modal-dialog modal-fullscreen-sm-down position-absolute bottom-0 end-0 mb-0 me-0">
+		<div class="modal-content rounded-0 border">
+			<div class="modal-header d-flex justify-content-between ">
+				<h5 class="modal-title">Add friend</h5>
+				<button type="button" data-bs-toggle="modal" data-bs-target="#friend" class="btn">
+					<img src="/img/people.svg" alt="person fill">
+				</button>
+			</div> 
+			<div class="modal-body">
+				<p>non</p>
+				<p>non</p>
+				<p>non</p>
+				<p>non</p>
+				<p>non</p>
+				<p>non</p>
+				<p>non</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+		</div>
+	</div> 
 </div>

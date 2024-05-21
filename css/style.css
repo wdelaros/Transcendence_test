@@ -5,3 +5,7 @@ html, body {
 .modal-backdrop {
 	display: none !important;
 }
+
+.friendBtn {
+	width: 25% !important;
+}

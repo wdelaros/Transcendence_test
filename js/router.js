@@ -39,12 +39,13 @@ function handleRoutes() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-	renderHeader();
 	renderFooter();
+	renderHeader();
 	handleRoutes();
 	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-	}); 
+		changeLanguage(document.documentElement.lang);
+	});
 });
 
 window.addEventListener('hashchange', handleRoutes);
