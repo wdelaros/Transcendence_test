@@ -20,12 +20,57 @@
 				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
 			</div> 
 			<div class="modal-body">
-				<div class="d-flex  justify-content-between ">
-					<button type="button" class="btn">meu</button>
-					<button type="button" class="btn">sound</button>
-					<button type="button" class="btn">Contact</button>
+				<ul class="nav nav-tabs d-flex justify-content-between ">
+					<li>
+						<button type="button" class="nav-link active ">menu</button>
+					</li>
+					<li>
+						<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#contact">Contact</button>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group ">
+					<button type="button" id="languageDisplay" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language">
+						Language
+					</button>
+					<ul id='languageSelector' class='dropdown-menu'> 
+						<li><button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english">English</button></li>
+						<li><button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french">French</button></li>
+					</ul>
 				</div>
-				<hr>
+			</div>
+		</div>
+	</div> 
+</div>
+
+<!-- Contact modal -->
+<div class="modal" id="contact" tabindex="-1" data-bs-backdrop="none" aria-labelledby="contact" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" data-i18n="setting">Setting</h5>
+				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+			</div> 
+			<div class="modal-body">
+				<div>
+					<ul class="nav nav-tabs d-flex justify-content-between ">
+						<li class="nav-item ">
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">menu</button>
+						</li>
+						<li class="nav-item ">
+							<button type="button" class="nav-link active">Contact</button>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<br>
+					<a href="https://github.com/ztrottie/" class="nav-link ">Zackary Trottier (ztrottie)</a>
+					<a href="https://github.com/Croutonnet" class="nav-link ">Raphael Pelchat (rapelcha)</a>
+					<a href="https://github.com/axhar005" class="nav-link ">Olivier Boucher (oboucher)</a>
+					<a href="https://github.com/wdelaros" class="nav-link ">William Delarosbil (wdelaros)</a>
+					<a href="https://github.com/selfix123" class="nav-link ">Zachary Beaumont (zbeaumon)</a>
+				</div>
 			</div>
 			<div class="modal-footer">
 				<div class="btn-group ">
