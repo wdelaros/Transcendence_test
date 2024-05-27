@@ -1,16 +1,14 @@
 {
 	"about": "About",
-	"cookie_preferences": "Cookie Preferences",
+	"add_friend": "Add friend",
+	"contact": "Contact",
 	"friend_list": "friends list",
 	"home": "Home",
 	"language": "Language",
 	"language_english": "English",
 	"language_french": "French",
-	"legal": "Legal",
+	"language_japanese": "Japanese",
 	"login": "Login",
-	"privacy": "Privacy",
-	"rights_reserved": "All rights reserved",
 	"setting": "Setting",
-	"sign_up": "Sign up",
-	"terms": "Terms"
+	"sign_up": "Sign up"
 }

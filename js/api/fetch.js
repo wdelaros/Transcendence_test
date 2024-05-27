@@ -14,7 +14,7 @@ export const loadContentLang = async (id, lang, callback) => {
 	if (isLanguageChangePending) {
 		return;
 	}
-	if (lang != 'en' && lang != 'fr') {
+	if (lang != 'en' && lang != 'fr' && lang != 'ja') {
 		console.error(`Error loading content for language '${lang}'`)
 		return;
 	}

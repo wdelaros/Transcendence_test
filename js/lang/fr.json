@@ -1,16 +1,14 @@
 {
 	"about": "À propos",
-	"cookie_preferences": "Préférences en matière de cookies",
+	"add_friend": "Ajouter un ami",
+	"contact": "Contact",
 	"home": "Maison en pain d'épice",
 	"friend_list": "Liste d'amis",
 	"language": "Langue",
 	"language_english": "Anglais",
 	"language_french": "Français",
-	"legal": "Juridique",
+	"language_japanese": "Japonais",
 	"login": "Se connecter",
-	"privacy": "Confidentialité",
-	"rights_reserved": "Tous droits réservés",
 	"setting": "Paramètre",
-	"sign_up": "S'inscrire",
-	"terms": "Conditions"
+	"sign_up": "S'inscrire"
 }

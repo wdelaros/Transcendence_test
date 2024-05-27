@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	handleRoutes();
 	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-		if (navigator.language == 'fr' || navigator.language == 'en')
+		if (navigator.language == 'fr' || navigator.language == 'en' || navigator.language == 'ja')
 			changeLanguage(navigator.language);
 		else
 			changeLanguage('en');

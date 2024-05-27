@@ -1,7 +1,3 @@
-html, body {
-	height: 100%;
-}
-
 .infiniteModal {
 	.modal-dialog {
 		max-width: none !important;
@@ -21,4 +17,9 @@ html, body {
 	.modal-body {
 		height: 1000px;
 	}
+}
+
+.miniLogo {
+	width: 32px;
+	height: 32px;
 }
