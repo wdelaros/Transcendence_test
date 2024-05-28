@@ -69,5 +69,13 @@ function attachEventListeners() {
 		button.addEventListener('click', () => {
 			changeLanguage(button.dataset.lang);
 		});
+		if (button.dataset.lang == document.documentElement.lang) {
+			button.disabled = true;
+			button.classList.add("btn-primary");
+		}
+		else {
+			button.disabled = false;
+			button.classList.remove("btn-primary")
+		}
 	});
 }

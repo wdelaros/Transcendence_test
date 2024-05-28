@@ -19,26 +19,53 @@
 				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
 			</div> 
 			<div class="modal-body">
-				<ul class="nav nav-tabs d-flex justify-content-between ">
-					<li>
-						<button type="button" class="nav-link active">menu</button>
-					</li>
-					<li>
-						<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#contact" data-i18n="contact"></button>
-					</li>
-				</ul>
-			</div>
-			<div class="modal-footer">
-				<div class="btn-group ">
-					<button type="button" id="languageDisplay" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language">
-						Language
-					</button>
-					<ul id='languageSelector' class='dropdown-menu'> 
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english"></button></li>
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french"></button></li>
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="ja" data-i18n="language_japanese"></button></li>
+				<div>
+					<ul class="nav nav-tabs d-flex justify-content-between">
+						<li>
+							<button type="button" class="nav-link active" data-i18n="language">language</button>
+						</li>
+						<li>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#about" data-i18n="about">about</button>
+						</li>
+						<li>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#contact" data-i18n="contact">contact</button>
+						</li>
 					</ul>
 				</div>
+				<br>
+				<div class="d-flex justify-content-around list-unstyled">
+					<li><button type="button" class="lang-btn btn" data-lang="en" data-i18n="language_english"></button></li>
+					<li><button type="button" class="lang-btn btn" data-lang="fr" data-i18n="language_french"></button></li>
+					<li><button type="button" class="lang-btn btn" data-lang="ja" data-i18n="language_japanese"></button></li>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>
+
+<!-- about modal -->
+<div class="modal" id="about" tabindex="-1" data-bs-backdrop="none" aria-labelledby="about" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" data-i18n="setting"></h5>
+				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+			</div> 
+			<div class="modal-body">
+				<div>
+					<ul class="nav nav-tabs d-flex justify-content-between ">
+						<li>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#setting" data-i18n="language">language</button>
+						</li>
+						<li>
+							<button type="button" class="nav-link active" data-i18n="about">about</button>
+						</li>
+						<li>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#contact" data-i18n="contact">contact</button>
+						</li>
+					</ul>
+				</div>
+				<br>
 			</div>
 		</div>
 	</div> 
@@ -56,24 +83,30 @@
 				<div>
 					<ul class="nav nav-tabs d-flex justify-content-between ">
 						<li class="nav-item ">
-							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">menu</button>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#setting" data-i18n="language">language</button>
+						</li>
+						<li>
+							<button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#about" data-i18n="about">about</button>
 						</li>
 						<li class="nav-item ">
-							<button type="button" class="nav-link active" data-i18n="contact"></button>
+							<button type="button" class="nav-link active" data-i18n="contact">contact</button>
 						</li>
 					</ul>
 				</div>
+				<br>
 				<div>
-					<br>
 					<span>
-						Zackary Trottier (ztrottie)
-						<a href="https://github.com/ztrottie" target="_blank" class="nav-link float-end" translate="no">
+						<span data-i18n="ztrottie"></span> (ztrottie)
+						<a href="https://www.linkedin.com/in/zackary-trottier-4962762b9/" target="_blank" class="nav-link float-end" translate="no">
+							<img src="/img/linkedin.svg" alt="linkedin logo">
+						</a>
+						<a href="https://github.com/ztrottie" target="_blank" class="nav-link float-end me-1" translate="no">
 							<img src="/img/github.svg" alt="github logo">
 						</a>
 					</span>
 					<br>
 					<span>
-						Raphael Pelchat (rapelcha)
+						<span data-i18n="rapelcha"></span> (rapelcha)
 						<a href="https://www.linkedin.com/in/rapha%C3%ABl-pelchat-4a42772b9/" target="_blank" class="nav-link float-end" translate="no">
 							<img src="/img/linkedin.svg" alt="linkedin logo">
 						</a>
@@ -83,7 +116,7 @@
 					</span>
 					<br>
 					<span>
-						Olivier Boucher (oboucher)
+						<span data-i18n="oboucher"></span> (oboucher)
 						<a href="https://www.linkedin.com/in/olivier-boucher-8047262b7/" target="_blank" class="nav-link float-end" translate="no">
 							<img src="/img/linkedin.svg" alt="linkedin logo">
 						</a>
@@ -93,7 +126,7 @@
 					</span>
 					<br>
 					<span>
-						William Delarosbil (wdelaros)
+						<span data-i18n="wdelaros"></span> (wdelaros)
 						<a href="https://www.linkedin.com/in/william-delarosbil-2757582b9/" target="_blank" class="nav-link float-end" translate="no">
 							<img src="/img/linkedin.svg" alt="linkedin logo">
 						</a>
@@ -103,24 +136,15 @@
 					</span>
 					<br>
 					<span>
-						Zachary Beaumont (zbeaumon)
-						<a href="https://github.com/selfix123" target="_blank" class="nav-link float-end" translate="no">
+						<span data-i18n="zbeaumon"></span> (zbeaumon)
+						<a href="https://www.linkedin.com/in/zachary-beaumont-6382782b9/" target="_blank" class="nav-link float-end" translate="no">
+							<img src="/img/linkedin.svg" alt="linkedin logo">
+						</a>
+						<a href="https://github.com/selfix123" target="_blank" class="nav-link float-end me-1" translate="no">
 							<img src="/img/github.svg" alt="github logo">
 						</a>
 					</span>
 					<br>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class="btn-group ">
-					<button type="button" id="languageDisplay" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language">
-						Language
-					</button>
-					<ul id='languageSelector' class='dropdown-menu'> 
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="en" data-i18n="language_english"></button></li>
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="fr" data-i18n="language_french"></button></li>
-						<li><button type="button" class="lang-btn dropdown-item" data-lang="ja" data-i18n="language_japanese"></button></li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -134,7 +158,7 @@
 			<div class="modal-header d-flex justify-content-between">
 				<h6 class="modal-title" data-i18n="friend_list"></h6>
 				<button type="button" data-bs-toggle="modal" data-bs-target="#addFriend" class="btn">
-					<img src="/img/person-fill-add.svg" alt="people fill add">
+					<img src="/img/person-fill-add.svg" alt="person fill add">
 				</button>
 			</div> 
 			<div class="modal-body">
