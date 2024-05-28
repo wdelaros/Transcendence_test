@@ -23,3 +23,7 @@
 	width: 32px;
 	height: 32px;
 }
+
+.paddle.modal-body {
+	height: 500px;
+}
