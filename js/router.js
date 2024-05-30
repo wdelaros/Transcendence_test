@@ -36,27 +36,24 @@ function handleRoutes() {
 	const handler = routeHandlers[hash] || routeHandlers['default'];
 	document.getElementById('content').innerHTML = '';
 	handler();
+	changeLanguage(localStorage.getItem("lang"));
 }
 
 window.addEventListener('DOMContentLoaded', () => {
 	let lang = localStorage.getItem("lang");
 	renderFooter();
 	renderHeader();
-	handleRoutes();
 	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-		localStorage.setItem("lang", lang);
-		if (localStorage.getItem("lang") == 'fr' || localStorage.getItem("lang") == 'en' || localStorage.getItem("lang") == 'ja') {
-			changeLanguage(localStorage.getItem("lang"));
-		}
-		else {
-			if (navigator.language == 'fr' || navigator.language == 'en' || navigator.language == 'ja')
-				localStorage.setItem("lang", navigator.language);
-			else
-				localStorage.setItem("lang", "en");
-			changeLanguage(localStorage.getItem("lang"));
-		}
 	});
+	localStorage.setItem("lang", lang);
+	if (localStorage.getItem("lang") != 'fr' && localStorage.getItem("lang") != 'en' && localStorage.getItem("lang") != 'ja') {
+		if (navigator.language == 'fr' || navigator.language == 'en' || navigator.language == 'ja')
+			localStorage.setItem("lang", navigator.language);
+		else
+			localStorage.setItem("lang", "en");
+	}
+	handleRoutes();
 });
 
 window.addEventListener('hashchange', handleRoutes);
