@@ -39,15 +39,23 @@ function handleRoutes() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+	let lang = localStorage.getItem("lang");
 	renderFooter();
 	renderHeader();
 	handleRoutes();
 	loadContentLang('body', document.documentElement.lang, () => {
 		attachEventListeners();
-		if (navigator.language == 'fr' || navigator.language == 'en' || navigator.language == 'ja')
-			changeLanguage(navigator.language);
-		else
-			changeLanguage('en');
+		localStorage.setItem("lang", lang);
+		if (localStorage.getItem("lang") == 'fr' || localStorage.getItem("lang") == 'en' || localStorage.getItem("lang") == 'ja') {
+			changeLanguage(localStorage.getItem("lang"));
+		}
+		else {
+			if (navigator.language == 'fr' || navigator.language == 'en' || navigator.language == 'ja')
+				localStorage.setItem("lang", navigator.language);
+			else
+				localStorage.setItem("lang", "en");
+			changeLanguage(localStorage.getItem("lang"));
+		}
 	});
 });
 
@@ -69,7 +77,9 @@ function attachEventListeners() {
 		button.addEventListener('click', () => {
 			changeLanguage(button.dataset.lang);
 		});
+
 		if (button.dataset.lang == document.documentElement.lang) {
+			localStorage.setItem("lang", button.dataset.lang);
 			button.disabled = true;
 			button.classList.add("btn-primary");
 		}
